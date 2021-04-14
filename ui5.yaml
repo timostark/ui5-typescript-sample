@@ -1,6 +1,6 @@
 specVersion: '2.2'
-metadata:ui5-typescript-sample
-  name: ui5_typescript
+metadata:
+  name: ui5-typescript-sample
 type: application
 framework:
   name: SAPUI5
