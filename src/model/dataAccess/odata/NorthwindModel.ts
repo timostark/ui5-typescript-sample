@@ -85,7 +85,7 @@ export class CustomerState extends GenericState {
         return this.Orders.length;
     }
 
-    @updateModel()
+    @updateModel
     public deleteAllOrders() {
         this.Orders = [];
     }

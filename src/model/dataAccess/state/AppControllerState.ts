@@ -7,12 +7,12 @@ export class AppControllerState extends GenericState {
     busy = true;
     delay = 0;
     
-    @updateModel()
+    @updateModel
     public setDelay(iDelay: number) {
         this.delay = iDelay;
     }
 
-    @updateModel()
+    @updateModel
     public setBusy(bBusy: boolean) {
         this.busy = bBusy;
     }

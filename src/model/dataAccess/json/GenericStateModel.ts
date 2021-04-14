@@ -9,7 +9,7 @@ export class GenericJSONModel<T> extends JSONModel implements GenericJSONModelIn
 
     constructor(data: T, instanceName: string) {
         super();
-        ( data as any as GenericState ).setModel(this);
+        (data as any as GenericState).setModel(this);
         this._setData(data);
         GenericJSONModelFactory.getInstance().setModelInstance(this, instanceName);
     }
@@ -29,14 +29,12 @@ export class GenericJSONModel<T> extends JSONModel implements GenericJSONModelIn
     }
 }
 
-export function updateModel() : any {
-    return function (target: any) {
-        let originalMethod = target.descriptor.value;
-        target.descriptor.value = function (...args: any[]) {
-            let result = originalMethod.apply(this, args);
-            ( this as GenericState ).getModel()._checkUpdate();
-            return result;
-        }
+export function updateModel(target: any, propertyKey: string) {
+    let originalMethod = target.descriptor.value;
+    target.descriptor.value = function (...args: any[]) {
+        let result = originalMethod.apply(this, args);
+        (this as GenericState).getModel()._checkUpdate();
+        return result;
     }
 }
 
@@ -65,11 +63,11 @@ export class GenericJSONModelFactory {
 }
 
 interface GenericJSONModelIntf {
-    _checkUpdate() : void;
+    _checkUpdate(): void;
 }
 
 export class GenericState {
-    protected _model ?: GenericJSONModelIntf;
+    protected _model?: GenericJSONModelIntf;
 
     public setModel(model: GenericJSONModelIntf) {
         this._model = model;

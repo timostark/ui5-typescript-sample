@@ -13,7 +13,7 @@ export class MasterControllerState extends GenericState {
         return this.customers.length;
     }
 
-    @updateModel()
+    @updateModel
     public setCustomers(cus: CustomerState[]) {
         this.customers = cus.map((e) => {
             e.setModel(this.getModel());
@@ -21,17 +21,17 @@ export class MasterControllerState extends GenericState {
         });
     }
 
-    @updateModel()
+    @updateModel
     public addCustomer(cus: CustomerState ) {
         this.customers.push(cus);
     }
     
-    @updateModel()
+    @updateModel
     public setDelay(iDelay: number) {
         this.delay = iDelay;
     }
     
-    @updateModel()
+    @updateModel
     public setBusy(bBusy: boolean) {
         this.busy = bBusy;
     }
