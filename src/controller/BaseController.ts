@@ -28,11 +28,11 @@ export default class BaseController extends Controller {
 		return this.getOwnerComponent().getODataModel();
 	}
 
-	public getResourceBundle() : ResourceBundle {
+	public getResourceBundle(): ResourceBundle {
 		return this.getOwnerComponent().getResourceBundle();
 	}
-	
-	public getText(text: string, parameter ?: string[] | number[]) : string {
+
+	public getText(text: string, parameter?: string[] | number[]): string {
 		return this.getOwnerComponent().getResourceBundle().getText(text, parameter);
 	}
 

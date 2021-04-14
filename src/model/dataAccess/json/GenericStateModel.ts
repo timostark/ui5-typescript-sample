@@ -1,5 +1,6 @@
 
 import JSONModel from "sap/ui/model/json/JSONModel";
+import BaseController from "../../../controller/BaseController";
 
 /**
  * @namespace com.msg.typescript.demo.model.dataAccess.json
@@ -28,7 +29,7 @@ export class GenericJSONModel<T> extends JSONModel implements GenericJSONModelIn
         (<any>this).checkUpdate(false, true);
     }
 }
-
+    
 export function updateModel(target: any, propertyKey: string) {
     let originalMethod = target.descriptor.value;
     target.descriptor.value = function (...args: any[]) {

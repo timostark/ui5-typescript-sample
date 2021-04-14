@@ -1,10 +1,9 @@
-import MessageBox, { Action } from "sap/m/MessageBox";
+import { Action } from "sap/m/MessageBox";
 import Table from "sap/m/Table";
-import TableSelectDialog from "sap/m/TableSelectDialog";
 import Event from "sap/ui/base/Event";
 import Control from "sap/ui/core/Control";
 import { GenericJSONModel } from "../model/dataAccess/json/GenericStateModel";
-import { Customer, CustomerState, Orders } from "../model/dataAccess/odata/NorthwindModel";
+import { CustomerState } from "../model/dataAccess/odata/NorthwindModel";
 import { NorthwindService } from "../model/dataAccess/odata/NorthwindService";
 import { MasterControllerState, MasterControllerStateRO } from "../model/dataAccess/state/MasterControllerState";
 import AsyncMessageBox from "../model/helper/AsyncMessageBox";
