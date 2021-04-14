@@ -1,2 +1,4 @@
-# ui5-testcafe-sample
-Testcafe Sample
+# Typescript
+Typescript Demo for msg
+
+To run execute ``npm run start``.

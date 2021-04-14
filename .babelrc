@@ -1,0 +1,19 @@
+  
+{
+    "ignore": [
+        "**/*.d.ts"
+    ],
+    "presets": [
+        "transform-ui5",
+        "@babel/preset-typescript"
+    ],
+    "plugins": [
+        "@babel/plugin-proposal-class-properties",
+        [
+            "@babel/plugin-proposal-decorators",
+            {
+                "decoratorsBeforeExport": false
+            }
+        ]
+    ]
+}

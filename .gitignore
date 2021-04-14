@@ -1,0 +1,14 @@
+/node_modules
+/build
+/doc
+/webapp
+/dist
+/.settings
+.idea
+.env
+.
+.vscode
+.project
+.jsdtscope
+org.eclipse.wst.jsdt.ui.superType.container
+org.eclipse.wst.jsdt.ui.superType.name

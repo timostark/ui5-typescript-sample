@@ -1,0 +1,49 @@
+{
+  "name": "manualcapacity",
+  "description": "BKA-SNR Manual Capacity",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.msg.de/starkt/ui5_typescript_v2.git"
+  },
+  "scripts": {
+    "ts-typecheck": "tsc --noEmit",
+    "ts-lint": "tslint 'src/**/*.ts'",
+    "build:ts": "cross-env BABEL_ENV=dev babel src --out-dir webapp --source-maps inline --extensions \".ts,.js\" --copy-files",
+    "watch:ts": "babel src --out-dir webapp --source-maps inline --extensions \".ts,.js\" --copy-files --watch",
+    "build:ui5": "ui5 build --clean-dest",
+    "start:ui5": "ui5 serve --h2",
+    "build": "npm-run-all ts-typecheck build:ts build:ui5",
+    "start": "npm-run-all --parallel watch:ts start:ui5"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.13.10",
+    "@babel/core": "^7.13.10",
+    "@babel/plugin-proposal-class-properties": "^7.13.0",
+    "@babel/plugin-proposal-decorators": "^7.13.15",
+    "@babel/plugin-syntax-decorators": "^7.12.13",
+    "@babel/preset-env": "^7.13.10",
+    "@babel/preset-typescript": "^7.13.0",
+    "@types/dompurify": "^2.2.1",
+    "@types/jquery": "^3.5.5",
+    "@types/qunit": "2.5.4",
+    "@ui5/cli": "^2.2.6",
+    "babel-preset-transform-ui5": "^7.0.3",
+    "cross-env": "^7.0.2",
+    "npm-run-all": "^4.1.5",
+    "typescript": "^4.2.3",
+    "ui5-middleware-livereload": "^0.5.2",
+    "ui5-middleware-simpleproxy": "^0.7.1",
+    "ui5-task-nwabap-deployer": "^1.0.15"
+  },
+  "dependencies": {
+    "@ui5/cli": "^2.10.0"
+  },
+  "ui5": {
+    "dependencies": [
+      "ui5-middleware-simpleproxy",
+      "ui5-middleware-livereload",
+      "ui5-task-nwabap-deployer"
+    ]
+  }
+}

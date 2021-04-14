@@ -1,0 +1,55 @@
+<mvc:View controllerName="com.msg.typescript.demo.controller.Master"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core"
+	xmlns:semantic="sap.m.semantic"
+	xmlns:smartFilterBar="sap.ui.comp.smartfilterbar"
+	xmlns:smartTable="sap.ui.comp.smarttable"
+	xmlns:layout="sap.ui.layout">
+	<semantic:FullscreenPage  busyIndicatorDelay="0" busy="{masterView>/busy}" title="{i18n>appTitle}" showFooter="false">
+		<Table id="idTable" inset="false" items="{masterView>/customers}">
+			<headerToolbar>
+				<OverflowToolbar>
+					<content>
+						<Title text="Customers ({masterView>/amountOfCustomers})" level="H2"/>
+						<ToolbarSpacer />
+						<Button text="Create" press="_createNewCustomer"/>
+					</content>
+				</OverflowToolbar>
+			</headerToolbar>
+			<columns>
+				<Column width="12em">
+					<Text text="Customer-Id" />
+				</Column>
+				<Column minScreenWidth="Tablet" demandPopin="true">
+					<Text text="Company-Name" />
+				</Column>
+				<Column minScreenWidth="Desktop" demandPopin="true" hAlign="End">
+					<Text text="Contact-Name" />
+				</Column>
+				<Column minScreenWidth="Desktop" demandPopin="true" hAlign="Center">
+					<Text text="Address" />
+				</Column>
+				<Column hAlign="End">
+					<Text text="City" />
+				</Column>
+				<Column hAlign="End">
+					<Text text="Orders" />
+				</Column>
+			</columns>
+			<items>
+				<ColumnListItem type="Navigation" press="_onShowDetails"> 
+					<cells>
+						<ObjectIdentifier title="{masterView>CustomerID}"/>
+						<Text text="{masterView>CompanyName}" />
+						<Text text="{masterView>ContactName}" />
+						<Text text="{masterView>Address}" />
+						<Text text="{masterView>City}" />
+						<Text text="{masterView>amountOfOrders}" />
+					</cells>
+				</ColumnListItem>
+			</items>
+		</Table>
+
+	</semantic:FullscreenPage>
+</mvc:View>
