@@ -1,5 +1,5 @@
 # Typescript
-Typescript Demo for msg
+Typescript Demo with UI5. This demo should give you a minimal idea, of what is possible using UI5 and typescript.
 
 To run execute ``npm run start``.
 
