@@ -6,7 +6,7 @@
 	xmlns:smartFilterBar="sap.ui.comp.smartfilterbar"
 	xmlns:smartTable="sap.ui.comp.smarttable"
 	xmlns:layout="sap.ui.layout">
-	<semantic:FullscreenPage  busyIndicatorDelay="0" busy="{masterView>/busy}" title="{i18n>appTitle}" showFooter="false">
+	<semantic:FullscreenPage  busyIndicatorDelay="0" busy="{masterView>/busy}" title="Typescript-Test" showFooter="false">
 		<Table id="idTable" inset="false" items="{masterView>/customers}">
 			<headerToolbar>
 				<OverflowToolbar>
