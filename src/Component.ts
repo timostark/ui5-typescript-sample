@@ -11,7 +11,7 @@ import ODataModel from "sap/ui/model/odata/v2/ODataModel";
 /**
  * @namespace com.msg.typescript.demo
  */
-export default class ManualCapacityComponent extends UIComponent {
+export default class UI5TypescriptSampleComponent extends UIComponent {
 	_oLoadingPromise: Promise<any>;
 
 	public static metadata = {

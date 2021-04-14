@@ -6,7 +6,7 @@ import Router from "sap/ui/core/routing/Router";
 import JSONModel from "sap/ui/model/json/JSONModel";
 import Model from "sap/ui/model/Model";
 import ODataModel from "sap/ui/model/odata/v2/ODataModel";
-import ManualCapacityComponent from "./../Component"
+import UI5TypescriptSampleComponent from "./../Component"
 
 /**
  * @namespace com.msg.typescript.demo.controller
@@ -45,8 +45,8 @@ export default class BaseController extends Controller {
 		return <T>elem;
 	}
 
-	public getOwnerComponent(): ManualCapacityComponent {
-		return <ManualCapacityComponent>super.getOwnerComponent();
+	public getOwnerComponent(): UI5TypescriptSampleComponent {
+		return <UI5TypescriptSampleComponent>super.getOwnerComponent();
 	}
 
 	public isDirty(): boolean {

@@ -1,10 +1,10 @@
 {
-  "name": "manualcapacity",
-  "description": "BKA-SNR Manual Capacity",
+  "name": "ui5_typescript",
+  "description": "UI5 Typescript demo",
   "version": "1.0.0",
   "repository": {
     "type": "git",
-    "url": "https://gitlab.msg.de/starkt/ui5_typescript_v2.git"
+    "url": "https://github.com/timostark/ui5-typescript-sample.git"
   },
   "scripts": {
     "ts-typecheck": "tsc --noEmit",

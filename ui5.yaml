@@ -1,6 +1,6 @@
 specVersion: '2.2'
-metadata:
-  name: manualcapacity
+metadata:ui5-typescript-sample
+  name: ui5_typescript
 type: application
 framework:
   name: SAPUI5
