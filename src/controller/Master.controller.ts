@@ -33,9 +33,6 @@ export default class Master extends BaseController {
             await this.getODataModel().metadataLoaded();
 
             const data = await this._oDataAccess.readAll();
-            data.forEach((e) => {
-            });
-
             this._oState.setCustomers(data);
         } catch (err) { }
         finally {
